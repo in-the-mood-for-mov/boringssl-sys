@@ -1,0 +1,25 @@
+[package]
+name = "another-boringssl-sys"
+description = "Low level bindings to Boring SSL"
+authors = ["Simon Génier <1782845+animalsiknow@users.noreply.github.com>"]
+license = "Apache-2.0"
+edition = "2018"
+version = "0.1.0"
+repository = "https://github.com/animailsiknow/boringssl-sys"
+readme = "README.md"
+keywords = ["crypto", "tls", "ssl"]
+build = "build.rs"
+
+[build-dependencies]
+bindgen = "0.49"
+cc = "1.0"
+failure = "0.1"
+toml = "0.5"
+
+[build-dependencies.serde]
+version = "1.0"
+default-features = false
+features = ["derive"]
+
+[dependencies]
+libc = "0.2"
